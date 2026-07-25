@@ -9,6 +9,7 @@ import { LoginForm } from './features/auth/components/LoginForm';
 import { EquipmentPage } from './features/equipment/components/EquipmentPage';
 import { AppLayout } from './layouts/AppLayout';
 import { DashboardPage } from './features/dashboard/components/DashboardPage';
+import { SettingsPage } from './features/settings/components/SettingsPage';
 
 export default function App() {
   // Ativa o ouvinte de sessão do Supabase
@@ -57,9 +58,7 @@ export default function App() {
 
           <Route path="/work-orders" element={<WorkOrdersPage />} />
           
-          <Route path="/settings" element={
-            <div className="text-slate-600 font-medium">Configurações da Clínica (Em construção...)</div>
-          } />
+          <Route path="/settings" element={<SettingsPage />} />
           
           {/* Fallback: Se digitar uma URL que não existe, volta pro painel */}
           <Route path="*" element={<Navigate to="/" replace />} />
