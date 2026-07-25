@@ -3,6 +3,7 @@ import { getTenantSlugFromHost } from './utils/tenant';
 import { useAuthListener } from './hooks/useAuthListener';
 import { useAuthStore } from './store/authStore';
 
+import { WorkOrdersPage } from './features/work-orders/components/WorkOrdersPage';
 import { OnboardingForm } from './features/auth/components/OnboardingForm';
 import { LoginForm } from './features/auth/components/LoginForm';
 import { EquipmentPage } from './features/equipment/components/EquipmentPage';
@@ -58,9 +59,7 @@ export default function App() {
           
           <Route path="/equipment" element={<EquipmentPage />} />
           
-          <Route path="/work-orders" element={
-            <div className="text-slate-600 font-medium">Módulo de Ordens de Serviço (Em construção...)</div>
-          } />
+          <Route path="/work-orders" element={<WorkOrdersPage />} />
           
           <Route path="/settings" element={
             <div className="text-slate-600 font-medium">Configurações da Clínica (Em construção...)</div>
