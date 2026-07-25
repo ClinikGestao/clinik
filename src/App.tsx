@@ -8,6 +8,7 @@ import { OnboardingForm } from './features/auth/components/OnboardingForm';
 import { LoginForm } from './features/auth/components/LoginForm';
 import { EquipmentPage } from './features/equipment/components/EquipmentPage';
 import { AppLayout } from './layouts/AppLayout';
+import { DashboardPage } from './features/dashboard/components/DashboardPage';
 
 export default function App() {
   // Ativa o ouvinte de sessão do Supabase
@@ -50,15 +51,10 @@ export default function App() {
       <Routes>
         <Route element={<AppLayout />}>
           
-          <Route path="/" element={
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-              <h2 className="text-lg font-semibold text-slate-800 mb-2">Bem-vindo ao Dashboard</h2>
-              <p className="text-slate-600">Seu Tenant ID foi injetado com sucesso no PostgreSQL e está protegendo esta sessão.</p>
-            </div>
-          } />
+          <Route path="/" element={<DashboardPage />} />
           
           <Route path="/equipment" element={<EquipmentPage />} />
-          
+
           <Route path="/work-orders" element={<WorkOrdersPage />} />
           
           <Route path="/settings" element={
